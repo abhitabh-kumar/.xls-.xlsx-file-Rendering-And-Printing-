@@ -1,0 +1,27 @@
+<div class="fileUploadContainer" appDragdrop (click)="fileInput.click()" (fileDropped)="fileStart($event)">
+  <input type="file"  hidden #fileInput (change)="fileStart($any($event.target).files)" accept=".xlsx,.xls">
+  <img src="../assets/fileuploadicon.png" alt="" srcset="">
+  <h2>Select Files</h2>
+  <h4>or</h4>
+  <h2>Drag and Drop .xlsx/.xls files With any numbers of Sheets</h2>
+  <p>(-- Size must Be Less Than 1mb --)</p>
+</div>
+<div *ngFor="let allData of ExcelData;let k = index">
+<h3>Excel data in HTML Table, File No. {{k+1}}</h3>
+<div *ngFor="let oneExcel of allData;let i = index">
+  <h3>{{sheetNames[k][i]}}</h3>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th scope="col" *ngFor="let key of arr[k][i]">{{key}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of oneExcel" >
+        <td *ngFor="let key of arr[k][i]">{{data[key]}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<router-outlet></router-outlet>

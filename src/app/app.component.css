@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@500&display=swap');
+.fileUploadContainer{
+    background-size: 150px;
+    width: 80%;
+    height: fit-content;
+    margin: 2rem auto; 
+    background-color: rgb(212, 255, 255);
+    border: 1px dashed black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+img{
+    width: 170px;
+}
+.fileUploadContainer:hover{
+    cursor: pointer;
+    background-color: rgb(184, 255, 255);
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    border-radius: 8px 8px 0px 0px;
+    min-width: 400px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.799);
+    margin: 1rem auto;
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table thead tr >:first-child{
+    border-radius: 8px 0px 0px 0px;
+
+}
+.styled-table thead tr >:last-child{
+    border-radius: 0px 8px 0px 0px;
+
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+h3{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+h2,h4 {
+    text-align: center;
+    font-family: 'Arima', cursive;
+    margin: 0;
+    font-weight: 300;
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
